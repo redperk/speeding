@@ -1,0 +1,105 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-stone-950 text-gray-100;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.input-wrapper input {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #1f2937;
+  color: #f9fafb;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-wrapper input::placeholder {
+  color: #9ca3af;
+}
+
+.input-wrapper input:focus {
+  border: 2px solid transparent;
+}
+
+.input-wrapper input[type="number"]::-webkit-inner-spin-button,
+.input-wrapper input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-wrapper input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.input-gradient-1::before,
+.input-gradient-2::before,
+.input-gradient-3::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 0.5rem;
+  z-index: 0;
+}
+
+.input-gradient-1::before {
+  background: linear-gradient(to right, #ff007a, #6a00ff, #007aff);
+}
+
+.input-gradient-2::before {
+  background: linear-gradient(to right, #007aff, #ff007a, #6a00ff);
+}
+
+.input-gradient-3::before {
+  background: linear-gradient(to right, #6a00ff, #007aff, #ff007a);
+}
+
+.table-wrapper {
+  position: relative;
+  overflow-x: auto;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  padding: 2px;
+  background: linear-gradient(to right, #ff007a, #6a00ff, #007aff);
+}
+
+.table-wrapper table {
+  border-radius: 0.5rem;
+  background-color: #1f2937;
+}
+
+.table-cell {
+  padding: 0.5rem;
+  color: #f9fafb;
+  text-align: center;
+  border: 1px solid #007aff;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #ff007a, #6a00ff, #007aff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hide-right-border {
+  border-right: none;
+}
+
+.hide-left-border {
+  border-left: none;
+}
